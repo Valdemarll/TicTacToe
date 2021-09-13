@@ -5,16 +5,11 @@ import java.util.Objects;
 
 public class Mechanic {
 
-    public boolean addFigure(String[][] gameField, int x, int y, String figure){
-        if (x >= 1 & y < 4){
-            if (Objects.equals(gameField[x - 1][y - 1], " ")) {
-                gameField[x - 1][y - 1] = figure;
-                return true;
-            }
-        }else{
-            System.out.println("Неправильно заданы строчка или столбец");
+    public String[][] addFigure(String[][] gameField, int x, int y, String figure){
+        if (Objects.equals(gameField[x - 1][y - 1], " ")) {
+            gameField[x - 1][y - 1] = figure;
         }
-        return false;
+        return gameField;
     }
 
     public String[][] setWinner(String[][] gameField){
@@ -48,6 +43,7 @@ public class Mechanic {
         }
         return 0;
     }
+
     private String[][] toUpper1(String[][] array, int index){
         for (int i = 0; i < array[index].length; i++){
             array[index][i] = array[index][i].toUpperCase(Locale.ROOT);

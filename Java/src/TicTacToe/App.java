@@ -10,7 +10,7 @@ public class App {
         while(true){
             System.out.println(ticTac.printOrder());
             System.out.println(ticTac);
-            if (ticTac.step()){
+            if (ticTac.step(ticTac.input())){
                 if (ticTac.checkEnd()) {
                     System.out.println(ticTac);
                     System.out.println("Продолжить игру?");

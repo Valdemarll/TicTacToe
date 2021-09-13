@@ -12,19 +12,24 @@ public class TicTac {
         this.gameField = gameField;
     }
 
-    public boolean step() {
+    public boolean step(int xy) {
+        System.out.println("В какую строчку и столбец установить фигуру (например 13, где 1 - строка, а 3 - столбец)");
+        try {
+            new Mechanic().addFigure(this.gameField, (xy / 10), (xy % 10), this.order);
+            return true;
+        }catch (ArrayIndexOutOfBoundsException e){
+            System.out.println("Вы неправильно ввели данные");
+            return false;
+        }
+    }
+    public int input(){
         Scanner scanner = new Scanner(System.in);
-
-        System.out.println("В какую строчку и столбец установить фигуру");
-        int xy = scanner.nextInt();
-
-        return new Mechanic().addFigure(this.gameField, (xy/10), (xy%10), this.order);
+        return scanner.nextInt();
     }
 
     public boolean checkEnd(){
         if (new Mechanic().setWinner(this.gameField) == null){
             int index = new Mechanic().elementIndex(this.figures, this.order);
-            System.out.println(index);
             this.order = this.figures[(index + 1)%2];
             return false;
         }else{
