@@ -2,7 +2,7 @@ package Task2;
 
 public class Doctor extends Worker{
     @Override
-    protected String work(){
+    public String work(){
         return "Я работаю врачом";
     }
 }

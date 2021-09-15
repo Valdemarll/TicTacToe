@@ -7,7 +7,8 @@ public class TrainTest {
     @Test
     public void testTrain(){
         Locomotive locomotive = new Locomotive(4);
-        BuffetWagon buffetWagon = new BuffetWagon();
+        BuffetWagon buffetWagon = new
+                BuffetWagon();
         CoupeWagon coupeWagon = new CoupeWagon(20);
         Plackart plackart = new Plackart(40);
 

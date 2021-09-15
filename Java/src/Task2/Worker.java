@@ -1,7 +1,7 @@
 package Task2;
 
 public class Worker {
-    protected String work(){
+    public String work(){
         return "Я работаю рабочим";
     }
 }

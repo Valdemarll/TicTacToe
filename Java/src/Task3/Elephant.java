@@ -1,7 +1,7 @@
 package Task3;
 
 public class Elephant extends Animal{
-    Elephant() {
+    public Elephant() {
         this.name = "Elephant";
         this.herbivore = true;
         this.fleshEating = false;

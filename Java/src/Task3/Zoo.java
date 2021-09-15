@@ -2,7 +2,7 @@ package Task3;
 
 public class Zoo {
     Animal[] zoo;
-    Zoo(Animal[] zoo){
+    public Zoo(Animal[] zoo){
         this.zoo = zoo;
     }
 
